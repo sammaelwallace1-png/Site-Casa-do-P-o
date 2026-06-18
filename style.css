@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ==================================================
+   CONFIGURAÇÕES GLOBAIS
+
+   Define configurações básicas utilizadas em todo
+   o projeto.
+
+   Alterações nesta seção afetam todas as páginas:
+   - index.html
+   - cardapio.html
+   - trabalheconosco.html
+================================================== */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/Pães-com-ingredientes-regionais-1920w.jpg);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* ==================================================
+   CABEÇALHO PRINCIPAL
+
+   Responsável pela navegação entre as páginas.
+
+   Estrutura compartilhada por todo o site.
+
+   Qualquer alteração nesta seção será refletida
+   em todas as páginas do projeto.
+================================================== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(100, 0, 0);
+    height: 70px;
+    padding: 0 40px;
+}
+
+header h1{
+    font-size: 28px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+header h2{
+    font-size: 55px;
+    color: white;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: normal;
+    margin-right: 35px;
+}
+
+header h3{
+    font-size: 28px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    margin-right: 230px;
+}
+
+/* ==================================================
+   HERO
+
+   Área reservada para futuras expansões visuais.
+
+   Atualmente é utilizada como estrutura base para
+   possíveis banners, imagens institucionais ou
+   campanhas promocionais.
+================================================== */
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* ==================================================
+   ESPECIALIDADES
+
+   Utilizada na página inicial e também na página
+   Trabalhe Conosco.
+
+   Esta seção organiza os blocos informativos
+   utilizando Flexbox para manter alinhamento e
+   distribuição consistentes.
+================================================== */
+
+.especialidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 80%;
+    margin-left: 10%;
+    color: white;
+    font-size: 20px;
+}
+
+/* ==================================================
+   BOX ITEM
+
+   Cada box representa um conteúdo independente
+   dentro da seção de especialidades.
+
+   Exemplo:
+   - Nossa História
+   - O que Fazemos
+   - Onde Estamos
+================================================== */
+
+.box-item{
+    width: 30%;
+    height: 400px;
+    background-color: rgb(71, 0, 0);
+    margin: 5px;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+/* ==================================================
+   ESPAÇAMENTO AUXILIAR
+
+   Classe utilizada para adicionar margem superior
+   em elementos específicos.
+
+   Atualmente utilizada no botão de envio de
+   currículo da página Trabalhe Conosco.
+================================================== */
+
+.m-top{
+    margin-top: 30px;
+}
+
+/* ==================================================
+   RODAPÉ
+
+   Área institucional presente em todas as páginas.
+
+   Responsável por exibir direitos autorais e
+   informações finais da empresa.
+================================================== */
+
+footer{
+    background: rgb(100, 0, 0);
+    height: 80px;
+    margin-top: 113px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================================================
+   PRODUTOS
+
+   Utilizada exclusivamente na página Cardápio.
+
+   Organiza todos os produtos da padaria em um
+   layout horizontal utilizando Flexbox.
+================================================== */
+
+.Produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(100, 0, 0);
+    padding: 2px 20px;
+    margin-top: 100px;
+    height: 600px;
+    gap: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* ==================================================
+   BOX PRODUTO
+
+   Cada box representa um item individual do
+   catálogo de produtos.
+
+   Exemplo:
+   - Pães
+   - Pães de Queijo
+   - Salgados
+   - Bolos
+================================================== */
+
+.box-produto{
+    width: 30%;
+    height: 600px;
+    margin: 5px;
+    padding: 2px 20px;
+    background-color: rgb(85, 0, 0);
+}
+
+/* ==================================================
+   BOTÃO FLUTUANTE DO WHATSAPP
+
+   Permanece visível durante toda a navegação.
+
+   Seu objetivo é facilitar o contato direto com
+   a empresa independentemente da página acessada.
+================================================== */
+
+.whatsapp-float{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-float img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.whatsapp-float img:hover{
+    transform: scale(1.1);
+}
+
+/* ==================================================
+   BOTÃO DE AÇÃO
+
+   Utilizado na página Trabalhe Conosco.
+
+   Destinado ao envio de currículos e outras ações
+   de destaque dentro do site.
+================================================== */
+
+.btn-hero{
+    background: rgb(100,0,0);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.btn-hero:hover{
+    background: rgb(130,0,0);
+    transform: scale(1.05);
+}
+
+/* ==================================================
+   EFEITOS VISUAIS
+
+   Aplica animações suaves aos cards do projeto.
+
+   O objetivo é melhorar a experiência do usuário
+   sem alterar a estrutura do layout.
+
+   Utilizado em:
+   - .box-item
+   - .box-produto
+================================================== */
+
+.box-item,
+.box-produto{
+    transition: 0.3s;
+}
+
+.box-item:hover,
+.box-produto:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+
+   Ajustes aplicados apenas em telas menores
+   que 768 pixels.
+
+   Objetivos:
+   - Melhorar a visualização em celulares.
+   - Evitar quebra de layout.
+   - Manter a versão desktop inalterada.
+
+   Nenhuma regra fora deste bloco é afetada.
+================================================== */
+
+@media screen and (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    header h2,
+    header h3{
+        margin-right: 0;
+    }
+
+    .especialidades{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box-item{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .Produtos{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box-produto{
+        width: 90%;
+        height: auto;
+    }
+
+    footer{
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+}
